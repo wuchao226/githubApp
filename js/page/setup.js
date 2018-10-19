@@ -5,7 +5,7 @@
  */
 
 import React, {Component} from 'react';
-import {Navigator} from 'react-native';
+import {StackNavigator} from 'react-navigation';
 import WelcomePage from './WelcomePage';
 
 function setup() {
@@ -18,8 +18,8 @@ function setup() {
         }
 
         render() {
-            return <Navigator
-                initialRoute={{component: WelcomePage}}
+            return <StackNavigator
+                initialRo={{component: WelcomePage}}
                 renderScene={(route, navigator) => this.renderScene(route, navigator)}
             />
         }
